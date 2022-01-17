@@ -15,13 +15,14 @@
         
         <div class="container">
 
-            <input v-model="inputValue" @keyup.enter="elementsList.push(inputValue)" type="text" name="" id="newItem" class="new_item_input" placeholder="Inserisci elemento lista">
+            <input v-model="inputValue" @keyup.enter="addAndClean()"  type="text" name="" id="newItem" placeholder="Inserisci elemento lista">
+            <button id="addListElement" @click="addAndClean()">Aggiungi</button>
 
             <div class="list_container">
 
                 <ul class="list">
-                    <li v-for="(element, index) in elementsList">{{element}} 
-                        <span class="remove_item">✕</span>
+                    <li v-for="(element, index) in elementsList">{{element}}  
+                        <span class="remove_item" @click="removeItem()">✕</span>
                     </li>
                 </ul>
 
