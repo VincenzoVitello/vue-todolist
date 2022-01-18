@@ -10,8 +10,8 @@ let app = new Vue ({
             this.elementsList.push(this.inputValue);
             this.inputValue = "";
         },
-        removeItem: function(){
-            this.elementsList.pop()
+        removeItem: function(element){
+            this.elementsList.splice(element, 1)
         }
     }
 })

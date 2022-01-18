@@ -22,7 +22,7 @@
 
                 <ul class="list">
                     <li v-for="(element, index) in elementsList">{{element}}  
-                        <span class="remove_item" @click="removeItem()">✕</span>
+                        <span class="remove_item" @click="removeItem(index)">✕</span>
                     </li>
                 </ul>
 
